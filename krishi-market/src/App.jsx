@@ -1,7 +1,24 @@
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import Farmers from './pages/Farmers'
+import Register from './pages/Register'
+import Login from './pages/Login'
+import Orders from './pages/Orders'
+
 function App() {
   return (
-    <div className="bg-green-100 min-h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-green-800">Krishi Market 🌿</h1>
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/farmers" element={<Farmers />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/orders" element={<Orders />} />
+      </Routes>
     </div>
   )
 }
